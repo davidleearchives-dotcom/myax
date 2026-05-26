@@ -1,0 +1,42 @@
+import type { Question } from "./types";
+
+export const SCALE_LABELS = [
+  { value: 1, label: "전혀 아니다" },
+  { value: 2, label: "아니다" },
+  { value: 3, label: "보통이다" },
+  { value: 4, label: "그렇다" },
+  { value: 5, label: "매우 그렇다" },
+] as const;
+
+export const QUESTIONS: Question[] = [
+  { id: 1, area: "awareness", text: "LLM의 환각(hallucination)이 왜 발생하는지 원리 수준에서 설명할 수 있다" },
+  { id: 2, area: "awareness", text: "RAG, 파인튜닝, 컨텍스트 윈도우 차이를 구분해 말할 수 있다" },
+  { id: 3, area: "awareness", text: "최신 주요 모델(Claude·GPT·Gemini 등) 3개의 강·약점을 비교할 수 있다" },
+  { id: 4, area: "awareness", text: "에이전트·MCP·도구 호출(Tool use) 개념을 안다" },
+  { id: 5, area: "awareness", text: "토큰·비용·레이턴시 트레이드오프를 의사결정에 반영한다" },
+  { id: 6, area: "usage", text: "주 5일 이상 AI 도구를 업무에 사용한다" },
+  { id: 7, area: "usage", text: "텍스트 외에 이미지·음성·코드 생성 AI도 정기 사용한다" },
+  { id: 8, area: "usage", text: "무료 외에 유료 구독을 1개 이상 운영 중이다" },
+  { id: 9, area: "usage", text: "모바일·데스크톱·API 등 2개 이상 채널로 AI에 접근한다" },
+  { id: 10, area: "usage", text: "새 AI 도구가 나오면 1주 안에 직접 써본다" },
+  { id: 11, area: "craft", text: "역할·맥락·제약·출력형식을 구조화해서 지시한다" },
+  { id: 12, area: "craft", text: "멀티턴 대화로 결과를 단계적으로 다듬는다" },
+  { id: 13, area: "craft", text: "Few-shot 예시를 직접 만들어 정확도를 끌어올린다" },
+  { id: 14, area: "craft", text: "자주 쓰는 프롬프트를 템플릿/스니펫으로 자산화했다" },
+  { id: 15, area: "craft", text: "답이 안 좋을 때 모델 탓이 아니라 프롬프트를 먼저 의심한다" },
+  { id: 16, area: "integration", text: "본인 업무 프로세스를 AI 기준으로 재설계한 적 있다" },
+  { id: 17, area: "integration", text: "반복 업무를 자동화 도구(Make, n8n, Zapier 등)로 연결해봤다" },
+  { id: 18, area: "integration", text: "API·코드로 AI를 호출해 무언가 만들어봤다" },
+  { id: 19, area: "integration", text: "AI 산출물을 검토·승인하는 본인만의 체크리스트가 있다" },
+  { id: 20, area: "integration", text: "팀원/지인에게 AI 활용법을 가르쳐본 경험이 있다" },
+  { id: 21, area: "critical", text: "AI 답변의 근거를 별도로 검증하는 습관이 있다" },
+  { id: 22, area: "critical", text: "회사 기밀·개인정보를 AI에 넣을 때 위험을 평가한다" },
+  { id: 23, area: "critical", text: "저작권·라이선스 이슈를 인지하고 회피한다" },
+  { id: 24, area: "critical", text: "AI 결과의 편향·차별 가능성을 의식적으로 점검한다" },
+  { id: 25, area: "critical", text: '"AI가 그렇다고 했다"를 그대로 인용·전달하지 않는다' },
+  { id: 26, area: "impact", text: "지난 3개월간 AI로 만든 결과물이 10건 이상 있다" },
+  { id: 27, area: "impact", text: "AI 도입 전 대비 동일 업무 시간이 50% 이상 줄었다" },
+  { id: 28, area: "impact", text: "AI로 만든 산출물이 매출·고객·외부 평가로 연결된 사례가 있다" },
+  { id: 29, area: "impact", text: "본인이 만든 AI 결과물 포트폴리오를 정리해두고 있다" },
+  { id: 30, area: "impact", text: "AI 활용으로 새로운 수익원/직무를 시도하거나 만들었다" },
+];

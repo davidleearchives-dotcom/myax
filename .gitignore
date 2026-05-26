@@ -1,0 +1,21 @@
+# deps
+node_modules/
+
+# build
+.next/
+out/
+
+# env
+.env*
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local tooling — not part of the project
+.bkit/
+.claude/
+
+# video source (too large / not needed in repo)
+제목\ 없는\ 동영상.mp4

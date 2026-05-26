@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light: Canvas Ice 기반 Teal 팔레트 */
+    --background: 187 43% 96%;       /* #f2f8f7 canvas-ice */
+    --foreground: 200 30% 11%;       /* #121d22 on-surface */
+    --card: 0 0% 100%;               /* #ffffff polar-white */
+    --card-foreground: 200 30% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 11%;
+    --primary: 182 100% 14%;         /* #004547 deep primary */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 187 30% 90%;        /* cloud-frost 계열 */
+    --secondary-foreground: 200 30% 11%;
+    --muted: 187 30% 90%;
+    --muted-foreground: 184 9% 46%;  /* #707979 outline */
+    --accent: 182 51% 23%;           /* #1c5d5f oceanic-teal */
+    --accent-foreground: 0 0% 100%;
+    --success: 160 55% 35%;
+    --warning: 38 92% 50%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 184 19% 80%;           /* misty-teal 계열 */
+    --input: 184 19% 80%;
+    --ring: 182 51% 23%;
+    --radius: 1rem;                  /* DESIGN.md: DEFAULT 1rem */
+  }
+
+  .dark {
+    /* Dark: Deep Teal 기반 — 기본 모드 */
+    --background: 187 40% 7%;        /* #0a1a1b */
+    --foreground: 187 43% 96%;       /* #f2f8f7 canvas-ice */
+    --card: 187 38% 10%;             /* #0e2426 */
+    --card-foreground: 187 43% 96%;
+    --popover: 187 38% 10%;
+    --popover-foreground: 187 43% 96%;
+    --primary: 187 43% 96%;
+    --primary-foreground: 187 40% 7%;
+    --secondary: 187 30% 14%;
+    --secondary-foreground: 187 43% 96%;
+    --muted: 187 30% 14%;
+    --muted-foreground: 187 20% 55%;  /* #6b9a9c */
+    --accent: 182 43% 70%;            /* #95d1d3 — 다크에서 밝은 teal */
+    --accent-foreground: 187 40% 7%;
+    --success: 160 55% 45%;
+    --warning: 38 92% 55%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 187 25% 18%;            /* #1c3a3c */
+    --input: 187 25% 18%;
+    --ring: 182 43% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif), Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* 풀스크린 섹션 */
+  .snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@layer base {
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.6s ease both;
+  }
+  @keyframes fade-in-delay {
+    0%, 30% { opacity: 0; transform: translateY(16px); }
+    100%    { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-delay {
+    animation: fade-in-delay 0.9s ease both;
+  }
+}
+
+/* PDF 캡처용 오프스크린 컨테이너 */
+.report-capture {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 794px;
+}
